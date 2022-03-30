@@ -26,19 +26,17 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   late Animation<double> opacity;
 
   void viewEventDetail(Event event) {
-    Navigator.of(context).pushAndRemoveUntil(
-        PageRouteBuilder(
-          opaque: false,
-          barrierDismissible: true,
-          transitionDuration: const Duration(milliseconds: 300),
-          pageBuilder: (BuildContext context, animation, __) {
-            return FadeTransition(
-              opacity: animation,
-              child: EventDetailPage(event),
-            );
-          },
-        ),
-        (Route<dynamic> route) => false);
+    Navigator.of(context).push(PageRouteBuilder(
+      opaque: false,
+      barrierDismissible: true,
+      transitionDuration: const Duration(milliseconds: 300),
+      pageBuilder: (BuildContext context, animation, __) {
+        return FadeTransition(
+          opacity: animation,
+          child: EventDetailPage(event),
+        );
+      },
+    ));
   }
 
   @override

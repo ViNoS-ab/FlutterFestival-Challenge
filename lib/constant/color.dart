@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
 
-const primaryLight = Colors.grey;
+var primaryLight = Colors.grey.shade200;
 const imgBG = Colors.purple;

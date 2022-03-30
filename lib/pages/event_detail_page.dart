@@ -197,12 +197,12 @@ class _EventDetailPageState extends State<EventDetailPage>
             Card(
               shape: const CircleBorder(),
               elevation: 0,
-              child: InkWell(
+              child: const InkWell(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: Icon(
                     Icons.favorite_border,
-                    color: hasTitle ? Colors.white : Colors.black,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -253,8 +253,8 @@ class _EventDetailPageState extends State<EventDetailPage>
         const Spacer(),
         Container(
           padding: const EdgeInsets.all(2),
-          decoration: const ShapeDecoration(
-              shape: StadiumBorder(), color: primaryLight),
+          decoration:
+              ShapeDecoration(shape: StadiumBorder(), color: primaryLight),
           child: Row(
             children: <Widget>[
               UIHelper.horizontalSpace(8),
